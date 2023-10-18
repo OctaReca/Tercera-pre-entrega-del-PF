@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../public/css/style.css">
+<div class="container mb-5">
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-end">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/products">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/realtimeproducts">Real Time Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/chat">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <h1 class="display-5 text-center mb-5">Mongo DB Chat</h1>
+        <div id="messages" class="col-md-4"></div>
+        <div class="col-md-4 offset-md-2">
+            <div class="mb-3">
+                <label for="user" class="form-label">User</label>
+                <input type="text" class="form-control" id="user">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <input type="text" class="form-control" id="message">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnSendMessage">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>

@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/public/css/products.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col d-flex align-items-center justify-content-end">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/products">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/realtimeproducts">Real Time Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/chat">Chat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/profile">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="user-data">
+                <h1>Bienvenido, {{user.first_name}} {{user.last_name}}</h1>
+                <p>Tu correo electrónico es: {{user.email}}</p>
+                <p>Tu rol es: {{user.role}}</p>
+            </div>
+        </div>
+        <form action="/api/sessions/logout" method="POST">
+            <button type="submit" class="btn-logout">Cerrar Sesión</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
